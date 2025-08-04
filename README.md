@@ -33,8 +33,8 @@ PhyloAug leverages:
 
 to generate biologically meaningful augmented datasets suitable for machine learning tasks.
 
-To generate new augmented datasets, see [Setup Instructions](#-setup-instructions).  
-To reproduce the results of the experiments, see [Run Model](#-run-model).
+To generate new augmented datasets, see [Setup Instructions](#setup-instructions).  
+To reproduce the results of the experiments, see [Run Model](#run-model).
 
 ---
 
@@ -44,9 +44,9 @@ To run PhyloAug, the following software and databases are required:
 
 - [Infernal](http://eddylab.org/infernal/)
 - [Rfam](https://rfam.org/)
-- [PAML](http://abacus.gene.ucl.ac.uk/software/paml.html)
+- [PAML]([https://github.com/abacus-gene/paml](https://github.com/abacus-gene/paml))
 - [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
-- NCBI `nt` database
+- [NCBI `nt` database](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
 ---
 
@@ -72,13 +72,10 @@ cmpress Rfam.cm
 ### PAML
 
 ```bash
-wget http://abacus.gene.ucl.ac.uk/software/paml4.9j.tgz
-tar -xvzf paml4.9j.tgz
-cd paml4.9j/src
+git clone https://github.com/abacus-gene/paml.git
+cd paml/src
 make
 ```
-
-Make sure to add `paml4.9j/bin` to your `$PATH`.
 
 ### NCBI BLAST
 
@@ -88,9 +85,9 @@ sudo apt-get install ncbi-blast+
 
 ### nt Database
 
-```bash
-update_blastdb.pl --decompress nt
-```
+The nt database is over 900GB, make sure you have adequate storage for this to download and unzip! (Recommended: 1.5TB)
+
+[NCBI `nt` database](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
 Ensure the downloaded database is accessible by your BLAST installation.
 
@@ -101,8 +98,8 @@ Ensure the downloaded database is accessible by your BLAST installation.
 ### 1. Install Required Python Packages
 
 ```bash
-pip install omnigenbench torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
-pip install transformers datasets huggingface_hub
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124
+pip install omnigenbench transformers datasets huggingface_hub
 ```
 
 > CUDA-compatible GPU and drivers recommended for faster training.
@@ -127,17 +124,17 @@ TRAINING_DATASET = "augmented/bpRNA_aug_4.json"
 ### 3. Train the Model
 
 ```bash
-python train.py --config config.py
+autotrain -m "model pathway or huggingface URL like: yangheng/OmniGenome-52M" -d "pathway to config.py file e.g., RNA-SSP-Archive2/config.py"
 ```
 
 ---
 
-## 🗃Dataset Structure
+## Dataset Structure
 
 Each augmented dataset includes:
-- Input RNA sequences
-- Augmented multiple sequence alignments
-- Secondary structure annotations
+- Original RNA Data
+- Augmented Input RNA sequences
+- Corresponding Secondary structure annotations
 
 ---
 
