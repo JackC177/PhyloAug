@@ -6,21 +6,21 @@
 
 ## Table of Contents
 
-- [Overview](#-overview)
-- [Requirements](#-requirements)
-- [Setup Instructions](#-setup-instructions)
+- [Overview](#overview)
+- [Requirements](#requirements)
+- [Setup Instructions](#setup-instructions)
   - [Infernal](#infernal)
   - [Rfam](#rfam)
   - [PAML](#paml)
   - [NCBI BLAST](#ncbi-blast)
   - [nt Database](#nt-database)
-- [Run Model](#-run-model)
-  - [Install Python Dependencies](#1-install-required-python-packages)
-  - [Prepare Configuration](#2-prepare-configuration)
-  - [Train the Model](#3-train-the-model)
-- [Dataset Structure](#-dataset-structure)
-- [Citation](#-citation)
-- [Contributing](#-contributing)
+- [Run Model](#run-model)
+  - [Install Python Dependencies](#install-required-python-packages)
+  - [Prepare Configuration](#prepare-configuration)
+  - [Train the Model](#train-the-model)
+- [Dataset Structure](#dataset-structure)
+- [Citation](#citation)
+- [Contributing](#contributing)
 
 ---
 
