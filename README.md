@@ -49,6 +49,8 @@ To run PhyloAug, the following software and databases are required:
 - [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 - [NCBI `nt` database](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
+Please ensure you utilise the phyloaug.yml python environment provided.
+
 ---
 
 ## Setup Instructions
