@@ -1,0 +1,6 @@
+infernal_path = ""
+rfam_covariance_model_path = ""
+paml_baseml_path = ""
+ncbi_blast_path = ""
+nt_database_path = ""
+mafft_path = ""
