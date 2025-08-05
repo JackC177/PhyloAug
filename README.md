@@ -14,6 +14,7 @@
   - [PAML](#paml)
   - [NCBI BLAST](#ncbi-blast)
   - [nt Database](#nt-database)
+  - [Python Environment](#python-environment)
 - [Generate Augmentations](#run-phyloaug)
 - [Run Model](#run-model)
   - [Install Python Dependencies](#install-required-python-packages)
@@ -48,8 +49,8 @@ To run PhyloAug, the following software and databases are required:
 - [PAML]([https://github.com/abacus-gene/paml](https://github.com/abacus-gene/paml))
 - [NCBI BLAST+](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 - [NCBI `nt` database](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
-
-Please ensure you utilise the phyloaug.yml python environment provided.
+- [MAFFT](https://mafft.cbrc.jp/alignment/server/index.html)
+- [Python Environment](phyloaug.yml)
 
 ---
 
@@ -92,7 +93,27 @@ The nt database is over 900GB, make sure you have adequate storage for this to d
 
 [NCBI `nt` database](ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nt.gz)
 
-Ensure the downloaded database is accessible by your BLAST installation.
+### MAFFT
+
+```
+sudo apt-get install mafft  # Debian/Ubuntu
+```
+Or install via conda:
+```
+conda install -c bioconda mafft
+```
+
+### Python Environment
+
+#### Python Environment Setup (via Anaconda)
+Make sure you have Anaconda or Miniconda installed, and have downloaded phyloaug.yml from this repo.
+
+Then run the following command in the root of this repository to install the environment:
+
+```
+conda env create -f phyloaug.yml
+conda activate phyloaug
+```
 
 ---
 
