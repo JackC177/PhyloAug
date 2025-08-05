@@ -14,6 +14,7 @@
   - [PAML](#paml)
   - [NCBI BLAST](#ncbi-blast)
   - [nt Database](#nt-database)
+- [Generate Augmentations](#run-phyloaug)
 - [Run Model](#run-model)
   - [Install Python Dependencies](#install-required-python-packages)
   - [Prepare Configuration](#prepare-configuration)
